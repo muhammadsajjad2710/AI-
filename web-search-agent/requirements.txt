@@ -1,0 +1,14 @@
+fastapi==0.143.3
+uvicorn[standard]==0.54.0
+langchain==1.4.6
+langchain-ollama==1.1.0
+langchain-core==1.6.11
+langgraph==1.2.15
+ddgs==9.16.0
+aiosqlite==0.22.1
+httpx==0.28.1
+pydantic==2.14.1
+pydantic-settings==2.16.0
+python-dotenv==1.2.4
+pytest==9.1.1
+pytest-asyncio==1.4.0

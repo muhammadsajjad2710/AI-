@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MSA AI Search Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#message-input">Skip to message input</a>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+              <rect x="1" y="1" width="30" height="30" rx="8" fill="#0b1f3a" />
+              <path
+                d="M8 20.5L12.2 10h2.1L18.5 20.5h-2.1l-.8-2.1h-4.6l-.8 2.1H8zm3.4-3.8h3.2L13.1 13h-.1l-1.6 3.7zM20.2 10h2v10.5h-2z"
+                fill="#ffffff"
+              />
+            </svg>
+          </span>
+          <div>
+            <h1>MSA AI Search Assistant</h1>
+            <p class="tagline">Local answers, with web search when it is actually needed.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <p id="status-pill" class="status-pill" role="status">Checking local model</p>
+          <button type="button" id="new-chat-btn" class="secondary-btn">New Chat</button>
+        </div>
+      </header>
+
+      <main class="chat-panel" aria-label="Conversation">
+        <div id="error-banner" class="error-banner" hidden role="alert"></div>
+        <div id="transcript" class="transcript" aria-live="polite"></div>
+      </main>
+
+      <footer class="composer">
+        <form id="chat-form" class="composer-form">
+          <label class="sr-only" for="message-input">Message</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="2"
+            maxlength="4000"
+            placeholder="Ask a question. Enter to send, Shift+Enter for a new line."
+            required
+          ></textarea>
+          <div class="composer-row">
+            <p id="composer-hint" class="composer-hint">Enter to send · Shift+Enter for a new line</p>
+            <button type="submit" id="send-btn" class="primary-btn">Send</button>
+          </div>
+        </form>
+      </footer>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
